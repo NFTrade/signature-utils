@@ -38,7 +38,7 @@ export const signatureUtils = {
         order: Order,
         signerAddress: string,
     ): Promise<SignedOrder> {
-        assert.doesConformToSchema('order', order, schemas.orderSchema, [schemas.hexSchema]);
+        // assert.doesConformToSchema('order', order, schemas.orderSchema, [schemas.hexSchema]);
         try {
             const signedOrder = await signatureUtils.ecSignTypedDataOrderAsync(supportedProvider, order, signerAddress);
             return signedOrder;
@@ -75,7 +75,7 @@ export const signatureUtils = {
     ): Promise<SignedOrder> {
         const provider = providerUtils.standardizeOrThrow(supportedProvider);
         assert.isETHAddressHex('signerAddress', signerAddress);
-        assert.doesConformToSchema('order', order, schemas.orderSchema, [schemas.hexSchema]);
+        // assert.doesConformToSchema('order', order, schemas.orderSchema, [schemas.hexSchema]);
         const web3Wrapper = new Web3Wrapper(provider);
         await assert.isSenderAddressAsync('signerAddress', signerAddress, web3Wrapper);
         const normalizedSignerAddress = signerAddress.toLowerCase();
