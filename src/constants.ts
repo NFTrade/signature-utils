@@ -129,7 +129,6 @@ export const constants = {
             { name: 'takerAssetData', type: 'bytes' },
             { name: 'makerFeeAssetData', type: 'bytes' },
             { name: 'takerFeeAssetData', type: 'bytes' },
-            { name: 'orderType', type: 'uint256' },
         ],
     },
     EXCHANGE_ZEROEX_TRANSACTION_SCHEMA: {

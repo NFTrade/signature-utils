@@ -15,7 +15,6 @@ export interface CreateOrderOpts {
     expirationTimeSeconds?: BigNumber;
     makerFeeAssetData?: string;
     takerFeeAssetData?: string;
-    orderType?: Number;
 }
 
 export interface ValidateOrderFillableOpts {
